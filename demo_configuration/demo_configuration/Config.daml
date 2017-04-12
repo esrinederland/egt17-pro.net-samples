@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArcGIS defaultAssembly="demo_configuration.dll"
+        defaultNamespace="demo_configuration"
+        xmlns="http://schemas.esri.com/DADF/Registry"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+
+  <AddInInfo id="{43ea84e4-7b44-4d76-80ba-44095ba768b4}" version="1.0" desktopVersion="1.4.6116">
+    <Name>demo_configuration</Name>
+    <Description>Configuration demo for DevDay 2017</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Mallo</Author>
+    <Company>Esri Nederland</Company>
+    <Date>05-Apr-2017 12:55:45, 2017</Date>
+    <Subject>Layouts</Subject>
+  </AddInInfo>
+
+  <Configuration>
+    <ConfigurationManager className="ConfigurationManager1"/>
+  </Configuration>
+
+  <modules>
+    <insertModule id="demo_configuration_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="demo_configuration_Tab1" caption="New Tab">
+          <group refID="demo_configuration_Group1"/>
+        </tab>-->
+      </tabs>
+
+      <groups>
+
+      </groups>
+
+      <controls>
+        <!-- add your controls here -->
+      </controls>
+
+    </insertModule>
+  </modules>
+</ArcGIS>

@@ -1,0 +1,30 @@
+﻿<ArcGIS defaultAssembly="Basics.dll" defaultNamespace="Basics" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{48c2c179-90ad-4578-b7b8-aaad92438952}" version="1.0" desktopVersion="1.4.7198">
+    <Name>Basics</Name>
+    <Description>ArcGIS Pro Basics demo for DevDay 2017</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Mallo</Author>
+    <Company>Esri Nederland</Company>
+    <Date>05-Apr-2017 08:13:46, 2017</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="Basics_Module" className="Module1" autoLoad="false" caption="Module1">
+      <tabs>
+        <tab id="demo_basics_Tab1" caption="DevDay 2017 - Basics" keytip="DevDay_2017">
+          <group refID="demo_basics_Group1" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="demo_basics_Group1" caption="DevDay 2017" appearsOnAddInTab="false">
+          <button refID="Basics_BasicButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="Basics_BasicButton" caption="BasicButton" className="BasicButton" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png" keytip="BasicButton">
+          <tooltip heading="Tooltip Heading">Basic Button<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>

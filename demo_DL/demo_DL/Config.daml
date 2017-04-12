@@ -1,0 +1,40 @@
+﻿<ArcGIS defaultAssembly="demo_DL.dll" defaultNamespace="demo_DL" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{d28852c1-b3a3-4bb6-a09d-3f23fe28de2c}" version="1.0" desktopVersion="1.4.7198">
+    <Name>demo_DL</Name>
+    <Description>Dark and Light demo for DevDay 2017</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Mallo</Author>
+    <Company>Esri Nederland</Company>
+    <Date>03-Apr-2017 14:49:28, 2017</Date>
+    <Subject>Layouts</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="demo_DL_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <tab id="demo_DL_Tab1" caption="DevDay 2017  - Dark/Light" keytip="DevDay_2017">
+          <group refID="demo_DL_Group1" />
+        </tab>
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="demo_DL_Group1" caption="DevDay 2017" appearsOnAddInTab="false" keytip="DevDay_2017">
+          <!-- host controls within groups -->
+          <button refID="demo_DL_Dockpane1_ShowButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="demo_DL_Dockpane1_ShowButton" caption="Show Dockpane 1" className="Dockpane1_ShowButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
+          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+        </button>
+      </controls>
+      <dockPanes>
+        <dockPane id="demo_DL_Dockpane1" caption="Dockpane 1" className="Dockpane1ViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="Dockpane1View" />
+        </dockPane>
+      </dockPanes>
+    </insertModule>
+  </modules>
+</ArcGIS>

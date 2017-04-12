@@ -1,0 +1,43 @@
+﻿<ArcGIS defaultAssembly="demo_popup.dll" defaultNamespace="demo_popup" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{7ea40d3b-5cfe-4cfd-a9f9-283a78051a27}" version="1.0" desktopVersion="1.4.7198">
+    <Name>demo_popup</Name>
+    <Description>Popup demo for DevDay 2017</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Mallo</Author>
+    <Company>Esri Nederland</Company>
+    <Date>04-Apr-2017 20:08:17, 2017</Date>
+    <Subject>Map Exploration</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="demo_popup_Module" className="Module1" autoLoad="true" caption="Module1">
+      <tabs>
+        <tab id="demo_popup_Tab1" caption="DevDay 2017 - Popups" keytip="DevDay_2017">
+          <group refID="demo_popup_Group1" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="demo_popup_Group1" caption="DevDay 2017" appearsOnAddInTab="false" keytip="DevDay_2017">
+          <button refID="demo_popup_WPFMessageBox" size="large" />
+          <button refID="demo_popup_ArcGISMessageBox" size="large" />
+          <button refID="demo_popup_SimpleCustomMessageBox" size="large" />
+          <button refID="demo_popup_AdvancedCustomMessageBox" size="large" />
+          <tool refID="demo_popup_AdvancedCustomMessageBox" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="demo_popup_WPFMessageBox" caption="WPF MessageBox" className="WPFMessageBox" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png" keytip="WPF MessageBox">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="demo_popup_ArcGISMessageBox" caption="ArcGIS MessageBox" className="ArcGISMessageBox" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png" keytip="ArcGIS MessageBox">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+        <button id="demo_popup_SimpleCustomMessageBox" caption="Simple MessageBox" className="SimpleCustomMessageBox" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png" keytip="Simple MessageBox">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>       
+        <tool id="demo_popup_AdvancedCustomMessageBox" caption="Advanced CustomMessageBox" className="AdvancedCustomMessageBox" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane" keytip="AdvancedCustomMessageBox">
+          <tooltip heading="Tooltip Heading">Advanced CustomMessageBox<disabledText /></tooltip>
+        </tool>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
